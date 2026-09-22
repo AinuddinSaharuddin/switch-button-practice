@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Button Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="practice-shell">
+        <section class="practice-panel" aria-labelledby="page-title">
+            <div class="title-block">
+                <p class="eyebrow">Nintendo Switch layout</p>
+                <h1 id="page-title">YXBA muscle memory</h1>
+            </div>
+
+            <div class="quiz-card" aria-live="polite">
+                <p class="target-label">Find</p>
+                <div class="target-button button-a" id="targetButton" aria-label="A, right">
+                    <span class="target-letter" id="targetLetter">A</span>
+                    <span class="target-sign sign-right" id="targetSign" aria-hidden="true"></span>
+                </div>
+                <p class="feedback" id="feedback">Use arrow keys or click the highlighted button.</p>
+            </div>
+
+            <div class="stats-grid" aria-label="Practice stats">
+                <div>
+                    <span>Score</span>
+                    <strong id="score">0</strong>
+                </div>
+                <div>
+                    <span>Streak</span>
+                    <strong id="streak">0</strong>
+                </div>
+                <div>
+                    <span>Best</span>
+                    <strong id="best">0</strong>
+                </div>
+            </div>
+
+            <div class="controls" aria-label="Practice controls">
+                <button class="control-button active" type="button" data-mode="normal">Practice</button>
+                <button class="control-button" type="button" data-mode="speed">Speed</button>
+                <button class="control-button" type="button" id="resetButton">Reset</button>
+            </div>
+
+            <div class="display-options" aria-label="Display options">
+                <button class="control-button" type="button" id="toggleControllerButton" aria-controls="controllerZone"
+                    aria-expanded="true">Hide Joy-Con</button>
+                <button class="control-button active" type="button" id="toggleClueButton" aria-pressed="true">Hide
+                    clues</button>
+            </div>
+        </section>
+
+        <section class="controller-zone" id="controllerZone" aria-label="Nintendo Switch right controller buttons">
+            <div class="controller-body">
+                <div class="stick" aria-hidden="true"></div>
+                <div class="button-diamond" id="buttonDiamond">
+                    <button class="face-button top" type="button" data-button="X" aria-label="X button, top">X</button>
+                    <button class="face-button left" type="button" data-button="Y"
+                        aria-label="Y button, left">Y</button>
+                    <button class="face-button right" type="button" data-button="A"
+                        aria-label="A button, right">A</button>
+                    <button class="face-button bottom" type="button" data-button="B"
+                        aria-label="B button, bottom">B</button>
+                </div>
+                <div class="home-dot" aria-hidden="true"></div>
+            </div>
+
+            <div class="layout-strip" aria-label="Button position reference">
+                <span><b>X</b> up</span>
+                <span><b>Y</b> left</span>
+                <span><b>A</b> right</span>
+                <span><b>B</b> down</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
